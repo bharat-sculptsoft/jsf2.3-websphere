@@ -1,0 +1,76 @@
+WASX7209I: Connected to process "server1" on node DESKTOP-DC0UL6INode01 using SOAP connector;  The type of process is: UnManagedProcess
+WASX7303I: The following options are passed to the scripting environment and are available as arguments that are stored in the argv variable: "[-o, deploy]"
+---------------------------------------------------------------
+ AdminApplication:       Check if application exists
+ Application Name:       jsf-webs-new-0.0.1-SNAPSHOT
+ Usage: AdminApplication.checkIfAppExists("jsf-webs-new-0.0.1-SNAPSHOT")
+ Return: Checks whether the application exists. If the application exists, a true value is returned.
+---------------------------------------------------------------
+ 
+ 
+------------------------------------------------------------
+[INSTALLING APPLICATION] localhost jsf-webs-new-0.0.1-SNAPSHOT
+2023-Aug-04 10:34:13 IST
+------------------------------------------------------------
+
+options:  ['-distributeApp', '-appname', 'jsf-webs-new-0.0.1-SNAPSHOT', '-MapModulesToServers', [['.*', '.*', 'WebSphere:server=server1']], '-contextroot', '/jsf-webs-new', '-MapWebModToVH', [['.*', '.*', 'default_host']]]
+
+INSTALLING
+WASX7327I: Contents of was.policy file:
+ //
+// Template policy file for enterprise application.
+// Extra permissions can be added if required by the enterprise application.
+//
+// NOTE: Syntax errors in the policy files will cause the enterprise application FAIL to start.
+//       Extreme care should be taken when editing these policy files. It is advised to use
+//       the policytool provided by the JDK for editing the policy files
+//       (WAS_HOME/java/jre/bin/policytool). 
+//
+
+grant codeBase "file:${application}" {
+};
+
+grant codeBase "file:${jars}" {
+};
+
+grant codeBase "file:${connectorComponent}" {
+};
+
+grant codeBase "file:${webComponent}" {
+};
+
+grant codeBase "file:${ejbComponent}" {
+};
+
+
+ADMA5016I: Installation of jsf-webs-new-0.0.1-SNAPSHOT started.
+ADMA5058I: Application and module versions are validated with versions of deployment targets.
+ADMA5005I: The application jsf-webs-new-0.0.1-SNAPSHOT is configured in the WebSphere Application Server repository.
+ADMA5005I: The application jsf-webs-new-0.0.1-SNAPSHOT is configured in the WebSphere Application Server repository.
+ADMA5081I: The bootstrap address for client module is configured in the WebSphere Application Server repository.
+ADMA5053I: The library references for the installed optional package are created.
+ADMA5005I: The application jsf-webs-new-0.0.1-SNAPSHOT is configured in the WebSphere Application Server repository.
+ADMA5001I: The application binaries are saved in C:\Program Files\IBM\WebSphere\AppServer\profiles\AppSrv02\wstemp\Script189beee81de\workspace\cells\DESKTOP-DC0UL6INode01Cell\applications\jsf-webs-new-0.0.1-SNAPSHOT.ear\jsf-webs-new-0.0.1-SNAPSHOT.ear
+ADMA5005I: The application jsf-webs-new-0.0.1-SNAPSHOT is configured in the WebSphere Application Server repository.
+SECJ0400I: Successfully updated the application jsf-webs-new-0.0.1-SNAPSHOT with the appContextIDForSecurity information.
+ADMA5005I: The application jsf-webs-new-0.0.1-SNAPSHOT is configured in the WebSphere Application Server repository.
+ADMA5005I: The application jsf-webs-new-0.0.1-SNAPSHOT is configured in the WebSphere Application Server repository.
+ADMA5113I: Activation plan created successfully.
+ADMA5011I: The cleanup of the temp directory for application jsf-webs-new-0.0.1-SNAPSHOT is complete.
+ADMA5013I: Application jsf-webs-new-0.0.1-SNAPSHOT installed successfully.
+
+SAVING CONFIG
+ADMA5071I: Distribution status check started for application jsf-webs-new-0.0.1-SNAPSHOT.
+WebSphere:cell=DESKTOP-DC0UL6INode01Cell,node=DESKTOP-DC0UL6INode01,distribution=true,expansion=notprocessing
+ADMA5011I: The cleanup of the temp directory for application jsf-webs-new-0.0.1-SNAPSHOT is complete.
+ADMA5072I: Distribution status check completed for application jsf-webs-new-0.0.1-SNAPSHOT.
+INSTALLED jsf-webs-new-0.0.1-SNAPSHOT
+------------------------------------------------------------
+[RESTARTING SERVER] localhost
+2023-Aug-04 10:34:29 IST
+------------------------------------------------------------
+
+------------------------------------------------------------
+[FINISHED] localhost jsf-webs-new-0.0.1-SNAPSHOT
+2023-Aug-04 10:34:29 IST
+------------------------------------------------------------
